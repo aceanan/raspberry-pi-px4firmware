@@ -5,11 +5,15 @@
 
 git clone https://github.com/crossa/raspberry-pi-px4firmware
 
-git clone https://github.com/PX4/Firmware.git
+#git clone https://github.com/PX4/Firmware.git
+git clone https://github.com/crossa/Firmware.git
 
 cd Firmware/
 
 git checkout <分支版本号>  #此处必须要做，否则编译会出错，因为主程序里面会读取版本号，切换过分枝才会有版本号
+git checkout v1.5.5-rpi
+
+git submodule update --init --recursive
 
 cp -rf raspberry-pi-px4firmware/* Firmware/
 
